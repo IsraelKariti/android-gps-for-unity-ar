@@ -3,7 +3,7 @@ package com.example.gpsplugin;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import android.location.Location;
+import android.location.Location;//h
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
