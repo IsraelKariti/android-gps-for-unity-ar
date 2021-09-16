@@ -1,4 +1,3 @@
 rootProject.name = "AndroidGPS"
 include ':app'
-include ':arnav'
 include ':GPSPlugin'

@@ -3,7 +3,6 @@ package com.example.androidgps;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -41,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 super.onLocationResult(locationResult);
                 Location location = locationResult.getLastLocation();
                 counter++;
-                textView.setText("count:"+counter+"\nLAT:"+location.getLatitude()+"\nLON:"+location.getLongitude());
+                textView.setText("count:"+counter+"\nLAT:"+location.getLatitude()+"\nLON:"+location.getLongitude()
+                +"\nacc: "+ location.getAccuracy()
+                );
             }
         };
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

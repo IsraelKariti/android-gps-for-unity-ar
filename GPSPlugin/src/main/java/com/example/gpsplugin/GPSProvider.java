@@ -24,6 +24,7 @@ public class GPSProvider {
     public double lon;
     public long time = 0;
     public boolean availability = true;
+    public float accuracy;
 
     public GPSProvider(Activity ac) {
         activity = ac;
@@ -50,6 +51,7 @@ public class GPSProvider {
                 lat = location.getLatitude();
                 lon = location.getLongitude();
                 time = location.getTime();
+                accuracy = location.getAccuracy();
             }
 
             @Override
